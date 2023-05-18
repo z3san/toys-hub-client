@@ -15,7 +15,7 @@ const NavBar = () => {
   const navItems = (
     <>
     <NavLink className={({ isActive }) => (isActive ? 'text-blue-500' : 'default')}  to='/'>Home</NavLink>
-   <NavLink className={({ isActive }) => (isActive ? 'text-blue-500' : 'default')}  to='/alloys'>All Toys</NavLink>
+   <NavLink className={({ isActive }) => (isActive ? 'text-blue-500' : 'default')}  to='/allToys'>All Toys</NavLink>
    <NavLink className={({ isActive }) => (isActive ? 'text-blue-500' : 'default')}  to='/blogs'>Blogs</NavLink>
    { user && <NavLink className={({ isActive }) => (isActive ? 'text-blue-500' : 'default')}  to='/myToys'>My Toys</NavLink>}
    {user && <NavLink className={({ isActive }) => (isActive ? 'text-blue-500' : 'default')}  to='/addToy'>Add a Toy</NavLink> }
