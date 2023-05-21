@@ -28,7 +28,13 @@ const Home = () => {
     <>
       <Banner />
 
-    
+      <ToysGallery></ToysGallery>
+
+      <ShopByAge></ShopByAge>
+
+      <ToyTabs></ToyTabs>
+
+      <TopProduct></TopProduct>
     </>
   );
 };
