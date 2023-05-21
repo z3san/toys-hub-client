@@ -34,7 +34,7 @@ const ToyTabCard = ({ toy }) => {
             to={`/singleToy/${_id}`}
             className="text-lg text-gray-600 hover:text-blue-800 transition-colors duration-300 ease-in-out"
           >
-            View Details
+            <button>View Details</button>
           </Link>
           <BsCartPlus title='Add to cart' className="text-3xl cursor-pointer hover:text-green-800  ">
             
