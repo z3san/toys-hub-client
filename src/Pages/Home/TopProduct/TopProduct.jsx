@@ -8,7 +8,7 @@ const TopProduct = () => {
 <h2 className="text-3xl font-bold ">Top Rated Products</h2>
       <p className="text-gray-500">OUR BEST PRODUCTS</p>
 </div>
-        <div className="md:flex items-center  mb-5">
+        <div className="md:flex  items-center mb-5">
 
     <div className="w-full sm:w-1/2 flex flex-col justify-between">
      
