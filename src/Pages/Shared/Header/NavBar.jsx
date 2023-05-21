@@ -1,7 +1,7 @@
 import React, { useContext } from 'react';
 import { Link, NavLink } from 'react-router-dom';
 import { AuthContext } from '../../../Providers/AuthProvider';
-
+import logo from "../../../../src/assets/logo.png"
 
 const NavBar = () => {
 
@@ -17,8 +17,8 @@ const NavBar = () => {
     <NavLink className={({ isActive }) => (isActive ? 'text-blue-500' : 'default')}  to='/'>Home</NavLink>
    <NavLink className={({ isActive }) => (isActive ? 'text-blue-500' : 'default')}  to='/allToys'>All Toys</NavLink>
    <NavLink className={({ isActive }) => (isActive ? 'text-blue-500' : 'default')}  to='/blogs'>Blogs</NavLink>
-   { user && <NavLink className={({ isActive }) => (isActive ? 'text-blue-500' : 'default')}  to='/myToys'>My Toys</NavLink>}
-   {user && <NavLink className={({ isActive }) => (isActive ? 'text-blue-500' : 'default')}  to='/addToy'>Add a Toy</NavLink> }
+    <NavLink className={({ isActive }) => (isActive ? 'text-blue-500' : 'default')}  to='/myToys'>My Toys</NavLink>
+   <NavLink className={({ isActive }) => (isActive ? 'text-blue-500' : 'default')}  to='/addToy'>Add a Toy</NavLink> 
     
     </>
   )
@@ -49,8 +49,12 @@ const NavBar = () => {
               {navItems}
         </ul>
       </div>
-      <Link to='/' className="btn btn-ghost normal-case text-xl"> <span className='text-blue-500'>Toys</span> 
-      <span className='text-pink-600'>Hub</span> </Link>
+      
+      <div className='flex items-center'>
+        <img className='w-12 rounded' src={logo} alt="" />
+        <div><Link to='/' className=" font-bold normal-case text-xl"> <span className='text-blue-500'>Toys</span> 
+      <span className='text-pink-600'>Hub</span> </Link></div>
+      </div>
     </div>
     <div className="navbar-center hidden lg:flex">
     <ul className="menu menu-horizontal items-center px-1 gap-5">

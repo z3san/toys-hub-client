@@ -8,12 +8,17 @@ import AllToys from "../Pages/AllToys/AllToys";
 import Blogs from "../Pages/Blogs/Blogs";
 import MyToys from "../Pages/MyToys/MyToys";
 import AddToy from "../Pages/AddToy/AddToy";
+import SingleToy from "../Pages/SingleToy/SingleToy";
+import PrivateRoutes from "./PrivateRoute";
+import UpdateToy from "../Pages/UpdateToy/UpdateToy";
+import ErrorPage from "../Pages/ErrorPage/ErrorPage";
 
 
 const router = createBrowserRouter([
     {
         path: '/',
         element: <Main></Main>,
+        errorElement: <ErrorPage/>,
         children: [
             {
                 path: '/',
@@ -37,16 +42,30 @@ const router = createBrowserRouter([
             },
             {
                 path: 'myToys',
-                element: <MyToys></MyToys>
+                element: <PrivateRoutes><MyToys></MyToys></PrivateRoutes>
+
             },
             {
                 path: 'addToy',
-                element: <AddToy></AddToy>
+                element: <PrivateRoutes><AddToy></AddToy></PrivateRoutes>
             },
+            {
+                path: 'singleToy/:id',
+                element: <PrivateRoutes><SingleToy></SingleToy></PrivateRoutes>,
+                loader: ({params})=> fetch(`https://toys-hub-server-two.vercel.app/allToys/${params.id}`)
+            },
+            {
+                path: 'updatedToys/:id',
+                element:<PrivateRoutes><UpdateToy></UpdateToy></PrivateRoutes>,
+                loader: ({params})=> fetch(`https://toys-hub-server-two.vercel.app/allToys/${params.id}`)
+            
+              },
+              
            
         ]
         
-    }
+    },
+   
 ])
 
 export default router
