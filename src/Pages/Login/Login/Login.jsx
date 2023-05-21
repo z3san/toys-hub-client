@@ -6,8 +6,10 @@ import { FaGoogle } from "react-icons/fa";
 import { AuthContext } from "../../../Providers/AuthProvider";
 import lazyAnim from "../../../assets/lazyAnim.json"
 import LazyLoad from "react-lazy-load";
+import useTitle from "../../../../Hook/useTitle";
 
 const Login = () => {
+  useTitle("Login");
   const { signIn, signInWithGoogle } = useContext(AuthContext);
   const [error, setError] = useState("");
   const navigate = useNavigate();

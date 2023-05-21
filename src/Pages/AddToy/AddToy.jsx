@@ -1,7 +1,8 @@
 import Swal from 'sweetalert2'
+import useTitle from '../../../Hook/useTitle';
 
 const AddToys = () => {
-  
+  useTitle("Add Toys");
     const handleAddToy = (event) => {
     event.preventDefault();
 
@@ -49,7 +50,7 @@ const AddToys = () => {
   };
   return (
     <div className="mx-auto mt-8">
-      <h1 className="text-center text-3xl font-bold">Add Toy</h1>
+      <h1 className="text-center text-3xl font-bold">Add Toys</h1>
       <form
         onSubmit={handleAddToy}
         className="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4">

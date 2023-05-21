@@ -43,12 +43,12 @@ console.log(toy);
         <td className="px-6 py-4 whitespace-nowrap text-right text-sm font-medium">
         
         <div className='flex items-center'>
-        <Link to={`/updatedToys/${_id}`}> <FaEdit  className="text-gray-600 w-6 h-6 hover:text-blue-600">
+        <Link to={`/updatedToys/${_id}`}> <FaEdit title='Update'  className="text-gray-600 w-6 h-6 hover:text-blue-600">
                 Update
             </FaEdit> </Link>
            
 
-            <FaRegTrashAlt onClick={()=>handleDelete(toy._id)} className="text-gray-600 w-6 h-6 hover:text-red-600 ml-2">
+            <FaRegTrashAlt title='Delete' onClick={()=>handleDelete(toy._id)} className="text-gray-600 w-6 h-6 hover:text-red-600 ml-2">
                 Delete
             </FaRegTrashAlt>
         </div>

@@ -1,8 +1,10 @@
 import React, { useEffect, useState } from "react";
 
 import AllToysRow from "./AllToysRow";
+import useTitle from "../../../Hook/useTitle";
 
 const AllToys = () => {
+  useTitle("All Toys");
   const [toys, setToys] = useState([]);
   const [searchQuery, setSearchQuery] = useState("");
   const [filteredToys, setFilteredToys] = useState([]);
@@ -44,7 +46,9 @@ const AllToys = () => {
   };
 
   return (
+    
     <div className="container mx-auto">
+      
       <h1 className="text-3xl font-bold mb-4 text-center">All Toys</h1>
 
       <div className="flex gap-2 mb-5">

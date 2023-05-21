@@ -8,8 +8,13 @@ import LazyLoad from "react-lazy-load";
 import Lottie from "lottie-react";
 import ToysGallery from "../ToysGallery/ToysGallery";
 import ShopByAge from "../ShopByAge/ShopByAge";
+import {Helmet} from "react-helmet";
+import useTitle from "../../../../Hook/useTitle";
+
+
 
 const Home = () => {
+  useTitle("Home");
   const { loading } = useContext(AuthContext);
   if (loading) {
     return (
@@ -26,6 +31,9 @@ const Home = () => {
 
   return (
     <>
+    <Helmet>
+      <title>Home</title>
+    </Helmet>
       <Banner />
 
       <ToysGallery></ToysGallery>

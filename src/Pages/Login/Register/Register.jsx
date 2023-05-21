@@ -5,8 +5,10 @@ import { updateProfile } from "firebase/auth";
 import { AuthContext } from "../../../Providers/AuthProvider";
 
 import regAnim from "../../../assets/regAnim.json";
+import useTitle from "../../../../Hook/useTitle";
 
 const Register = () => {
+  useTitle("Register");
   const { createUser } = useContext(AuthContext);
   const [error, setError] = useState("");
 
