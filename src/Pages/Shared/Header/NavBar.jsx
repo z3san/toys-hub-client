@@ -14,11 +14,11 @@ const NavBar = () => {
 
   const navItems = (
     <>
-    <NavLink className={({ isActive }) => (isActive ? 'text-blue-500' : 'default')}  to='/'>Home</NavLink>
-   <NavLink className={({ isActive }) => (isActive ? 'text-blue-500' : 'default')}  to='/allToys'>All Toys</NavLink>
-   <NavLink className={({ isActive }) => (isActive ? 'text-blue-500' : 'default')}  to='/blogs'>Blogs</NavLink>
-    <NavLink className={({ isActive }) => (isActive ? 'text-blue-500' : 'default')}  to='/myToys'>My Toys</NavLink>
-   <NavLink className={({ isActive }) => (isActive ? 'text-blue-500' : 'default')}  to='/addToy'>Add a Toy</NavLink> 
+    <NavLink className={({ isActive }) => (isActive ? 'text-pink-500' : 'default')}  to='/'>Home</NavLink>
+   <NavLink className={({ isActive }) => (isActive ? 'text-pink-500' : 'default')}  to='/allToys'>All Toys</NavLink>
+   <NavLink className={({ isActive }) => (isActive ? 'text-pink-500' : 'default')}  to='/blogs'>Blogs</NavLink>
+    <NavLink className={({ isActive }) => (isActive ? 'text-pink-500' : 'default')}  to='/myToys'>My Toys</NavLink>
+   <NavLink className={({ isActive }) => (isActive ? 'text-pink-500' : 'default')}  to='/addToy'>Add a Toy</NavLink> 
     
     </>
   )

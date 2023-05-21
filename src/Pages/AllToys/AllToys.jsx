@@ -28,7 +28,7 @@ const AllToys = () => {
         );
         const data = await response.json();
         setToys(data);
-        console.log(data);
+       
       } catch (error) {
         console.error("Error:", error);
       }
@@ -54,9 +54,9 @@ const AllToys = () => {
           onChange={handleSearchInput}
           type="text"
           placeholder="Type here"
-          className="input input-bordered input-primary w-full max-w-xs"
+          className="input input-bordered input-secondary w-full max-w-xs"
         />{" "}
-        <button onClick={handleSearch} className="btn btn-primary">Search</button>
+        <button onClick={handleSearch} className="bg-pink-500 hover:bg-pink-700 text-white py-2 px-4 rounded-full text-sm font-semibold">Search</button>
       </div>
       <div className="overflow-x-auto">
         <table className="w-full bg-white border border-gray-300">

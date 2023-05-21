@@ -12,7 +12,7 @@ const AllToysRow = ({toy, handleViewDetails}) => {
                 <td className="py-2 px-4 md:py-4 md:px-6 border-b border-gray-300">
                 <Link to={`/singleToy/${toy._id}`}>
                 <button
-                    className="bg-blue-500 hover:bg-blue-700 text-white font-semibold py-2 px-4 rounded-full"
+                    className="bg-pink-500 hover:bg-pink-700 text-white py-2 px-4 rounded-full text-sm font-semibold"
                     onClick={() => handleViewDetails(toy._id)}
                   >
                     View Details
